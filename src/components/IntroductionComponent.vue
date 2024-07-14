@@ -1,7 +1,11 @@
 <template>
   <section class="introduction">
     <!-- <div class="introduction__body"> -->
-    <img class="background" src="../assets/images/sunset.jpg" alt="" />
+    <img
+      class="background"
+      src="../assets/images/4500948-aerial-view-green-nature-trees-forest.jpg"
+      alt=""
+    />
     <h1 class="header">Hello, I'm <span>IRYNA KRYVOKHYZHA</span></h1>
     <h2 class="subheader">I'm a frontend developer</h2>
     <div class="icon">
