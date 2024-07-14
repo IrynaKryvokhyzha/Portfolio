@@ -8,7 +8,7 @@
         <span>ABOUT</span>
         <h2>Developer</h2>
         <p class="description">
-          I am Iryna, a dedicated frontend developer from Ukraine, currently
+          I am Iryna , a dedicated frontend developer from Ukraine, currently
           living in California, USA. My expertise is developing user-friendly
           websites and web applications.
         </p>
