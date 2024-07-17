@@ -48,7 +48,6 @@ export default {
   display: flex;
   font-family: "Open Sans";
   color: white;
-  margin-bottom: 20px;
 
   // .about__body
 
