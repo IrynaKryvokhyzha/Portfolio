@@ -4,7 +4,7 @@
     <img
       class="background"
       src="../assets/images/4500948-aerial-view-green-nature-trees-forest.jpg"
-      alt=""
+      alt="pines image"
     />
     <h1 class="header">Hello, I'm <span>IRYNA KRYVOKHYZHA</span></h1>
     <h2 class="subheader">I'm a frontend developer</h2>
@@ -32,7 +32,7 @@ export default {
 
 <style lang="scss" scoped>
 .introduction {
-  height: 100vh;
+  height: 100svh;
   font-family: "Open Sans";
   position: relative;
   display: flex;
@@ -44,7 +44,7 @@ export default {
   z-index: -1;
 }
 .background {
-  transform: translateZ(-10px) scale(2.5);
+  transform: translateZ(-10px) scale(2);
   height: 100%;
 }
 .foreground {

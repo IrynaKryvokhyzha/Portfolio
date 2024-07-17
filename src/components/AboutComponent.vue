@@ -6,11 +6,11 @@
       </div>
       <div class="body-content">
         <span>ABOUT</span>
-        <h2>Developer</h2>
+        <h2>{{ title }}</h2>
         <p class="description">
           I am Iryna , a dedicated frontend developer from Ukraine, currently
-          living in California, USA. My expertise is developing user-friendly
-          websites and web applications.
+          living in California, USA. My expertise is developing attractive and
+          user-friendly websites and web applications.
         </p>
       </div>
     </div>
@@ -20,15 +20,35 @@
 <script>
 export default {
   name: "AboutComponent",
+  data() {
+    return {
+      titles: ["Developer", "Problem Solver", "Team Player"],
+      currenIndex: 0,
+    };
+  },
+  computed: {
+    title() {
+      return this.titles[this.currenIndex];
+    },
+  },
+  methods: {
+    changeTitle() {
+      this.currenIndex = (this.currenIndex + 1) % this.titles.length;
+    },
+  },
+  mounted() {
+    setInterval(this.changeTitle, 5000);
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 .about {
-  height: 100vh;
+  height: 100svh;
   display: flex;
   font-family: "Open Sans";
   color: white;
+  margin-bottom: 20px;
 
   // .about__body
 
@@ -58,8 +78,30 @@ export default {
   background-color: #372f2f;
 }
 h2 {
-  font-size: 48px;
+  position: relative;
+  font-size: 58px;
   font-weight: 700;
+  color: rgb(233, 233, 126);
+}
+h2::before {
+  content: "";
+  position: absolute;
+  left: 100%;
+  width: 120%;
+  height: 120%;
+  background: linear-gradient(90deg, transparent 0%, #372f2f 5%, #372f2f 100%);
+  animation: animate 5s linear infinite;
+}
+@keyframes animate {
+  0% {
+    left: -10%;
+  }
+  50% {
+    left: 110%;
+  }
+  100% {
+    left: -10%;
+  }
 }
 .description {
   text-align: start;
