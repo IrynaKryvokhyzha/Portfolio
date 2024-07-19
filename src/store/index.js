@@ -28,28 +28,26 @@ export default createStore({
       },
       {
         id: 4,
-        title: "DR PromakeUp",
-        description:
-          "Website for makeup artist that shows natural makeup brushes",
-        link: "https://dr-brushes.web.app/#/",
-        image: require("@/assets/images/promakeup.webp"),
+        title: "Dice",
+        description: "Dice Game",
+        link: "https://irynakryvokhyzha.github.io/Dice_Game/",
+        image: require("@/assets/images/dice-image.jpg"),
       },
       {
         id: 5,
-        title: "DR PromakeUp",
-        description:
-          "Website for professional make-up artist that realized her dream and created a makeup brush brand",
-        link: "https://dr-brushes.web.app/#/",
-        image: require("@/assets/images/promakeup.webp"),
+        title: "Truck Service",
+        description: "In Progress...",
+        link: "https:",
+        image: require("@/assets/images/truck.jpg"),
       },
-      {
-        id: 6,
-        title: "Bean Scene",
-        description:
-          "Website for makeup artist that shows natural makeup brushes",
-        link: "https://dr-brushes.web.app/#/",
-        image: require("@/assets/images/promakeup.webp"),
-      },
+      // {
+      //   id: 6,
+      //   title: "Bean Scene",
+      //   description:
+      //     "Website for makeup artist that shows natural makeup brushes",
+      //   link: "https://dr-brushes.web.app/#/",
+      //   image: require("@/assets/images/promakeup.webp"),
+      // },
       // {
       //   id: 7,
       //   title: "Drum Kit",

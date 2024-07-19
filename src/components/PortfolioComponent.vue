@@ -7,18 +7,31 @@
         class="item"
         :style="{ '--i': ++index, '--total': getProductsList.length }"
       >
-        <a :href="product.link" class="link">
+        <a
+          :href="product.link"
+          class="link"
+          v-if="index !== getProductsList.length"
+        >
           <div class="image">
             <img :src="product.image" alt="image" />
             <div class="content">
               <h2 class="header">{{ product.title }}</h2>
               <p class="description">{{ product.description }}</p>
               <button class="button">
-                link
+                Visit
               </button>
             </div>
           </div>
         </a>
+        <div v-else class="link deactivated">
+          <div class="image">
+            <img :src="product.image" alt="image" />
+            <div class="content">
+              <h2 class="header">{{ product.title }}</h2>
+              <p class="description">{{ product.description }}</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -36,80 +49,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-/*.portfolio {
-  max-width: 1230px;
-  margin: 0 auto;
-  padding: 15px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  justify-content: center;
-  align-items: center;
-}
-.portfolio-container {
-  flex: 0 1 25%;
-}
-
-.image {
-  position: relative;
-  img {
-    max-width: 100%;
-  }
-}
-.content {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  background: rgb(0, 0, 0, 0.5);
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  @media (any-hover: hover) {
-    &:hover {
-      opacity: 1;
-    }
-  }
-}
-.content > * {
-  transform: translateY(100px);
-  transition: transform 1s;
-}
-.content:hover > * {
-  transform: translateY(0);
-}
-
-.header {
-  font-size: 32px;
-  color: yellow;
-  font-weight: 800;
-  text-shadow: 3px 0 black;
-}
-.description {
-  font-size: 24px;
-  color: white;
-  line-height: 1.2;
-}
-.button {
-  color: yellow;
-  font-size: 24px;
-
-  text-decoration: underline;
-  text-transform: capitalize;
-}*/
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 .portfolio {
-  background: linear-gradient(to right, #23b232, orange);
+  background: linear-gradient(to right, #372f2f, rgb(233, 233, 126));
   height: 100%;
   width: 100%;
   display: flex;
@@ -120,10 +66,10 @@ export default {
 }
 .slider {
   position: relative;
-  width: 300px;
+  width: 350px;
   height: 300px;
   transform-style: preserve-3d;
-  animation: rotate 30s linear infinite;
+  animation: rotate 40s linear infinite;
 }
 @keyframes rotate {
   0% {

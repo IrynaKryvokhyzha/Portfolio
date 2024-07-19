@@ -2,7 +2,7 @@
   <section class="introduction">
     <img
       class="background"
-      src="../assets/images/4500948-aerial-view-green-nature-trees-forest.jpg"
+      src="../assets/images/forest.jpg"
       alt="pines image"
     />
     <div class="content">
