@@ -1,20 +1,20 @@
 <template>
   <section class="introduction">
-    <!-- <div class="introduction__body"> -->
     <img
       class="background"
       src="../assets/images/4500948-aerial-view-green-nature-trees-forest.jpg"
       alt="pines image"
     />
-    <h1 class="header">Hello, I'm <span>IRYNA KRYVOKHYZHA</span></h1>
-    <h2 class="subheader">I'm a frontend developer</h2>
-    <div class="icon">
-      <font-awesome-icon
-        @click="scroll('about')"
-        :icon="['fas', 'angles-down']"
-      />
+    <div class="content">
+      <h1 class="header">Hello, I'm <span>IRYNA KRYVOKHYZHA</span></h1>
+      <h2 class="subheader">I'm a frontend developer</h2>
+      <div class="icon">
+        <font-awesome-icon
+          @click="scroll('about')"
+          :icon="['fas', 'angles-down']"
+        />
+      </div>
     </div>
-    <!-- </div> -->
   </section>
 </template>
 
@@ -42,16 +42,11 @@ export default {
   height: 100%;
   transform-style: preserve-3d;
   z-index: -1;
+  padding: 30px;
 }
 .background {
   transform: translateZ(-10px) scale(2);
   height: 100%;
-}
-.foreground {
-  transform: translateZ(-5px) scale(1.5);
-}
-.background,
-.foreground {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -59,22 +54,32 @@ export default {
   object-position: center;
   z-index: -1;
 }
-
+.content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  padding-top: 500px;
+  gap: 30px;
+}
 .header,
 .subheader,
 .icon {
   font-size: 48px;
   font-weight: 900;
-  color: white;
+
   text-shadow: 0 0 5px rgb(0, 0, 0);
 }
 .header {
   font-weight: 700;
-  padding-bottom: 30px;
+  color: white;
   line-height: 1.5;
+  text-align: center;
 }
 .subheader {
-  padding-bottom: 30px;
+  flex: 1 1 auto;
+  color: white;
 }
 span {
   font-family: "Coming Soon";
@@ -84,6 +89,7 @@ span {
 .icon {
   transition: scale 0.5s ease;
   color: yellow;
+
   @media (any-hover: hover) {
     &:hover {
       scale: 2;

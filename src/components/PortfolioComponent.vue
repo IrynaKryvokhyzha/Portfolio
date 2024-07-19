@@ -1,22 +1,4 @@
 <template>
-  <!-- <div id="portfolio" class="portfolio">
-    <div
-      v-for="product in getProductsList"
-      :key="product.id"
-      class="portfolio-container"
-    >
-      <div class="image">
-        <img :src="product.image" alt="image" />
-        <div class="content">
-          <h2 class="header">{{ product.title }}</h2>
-          <p class="description">{{ product.description }}</p>
-          <button class="button">
-            <a :href="product.link" class="link">link </a>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div> -->
   <div id="portfolio" class="portfolio">
     <div class="slider">
       <div

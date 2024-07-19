@@ -8,16 +8,16 @@ export default createStore({
         title: "DR PromakeUp",
         description:
           "Website for professional make-up artist that realized her dream and created a makeup brush brand",
-        link: "https://dr-brushes.web.app/#/",
+        link: "https://dorinarotari.com/",
         image: require("@/assets/images/promakeup.webp"),
       },
       {
         id: 2,
         title: "Bean Scene",
         description:
-          "Website for makeup artist that shows natural makeup brushes",
-        link: "https://dr-brushes.web.app/#/",
-        image: require("@/assets/images/photo.jpg"),
+          "A web app for a coffee café, allowing users to make payments via QR code",
+        link: "https://bean-scene.com",
+        image: require("@/assets/images/coffee_image.jpg"),
       },
       {
         id: 3,
