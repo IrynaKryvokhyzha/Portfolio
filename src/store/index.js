@@ -22,10 +22,9 @@ export default createStore({
       {
         id: 3,
         title: "Drum Kit",
-        description:
-          "Website for makeup artist that shows natural makeup brushes",
-        link: "https://dr-brushes.web.app/#/",
-        image: require("@/assets/images/paralax.webp"),
+        description: "Play on drums game",
+        link: "https://irynakryvokhyzha.github.io/Drum-kit/",
+        image: require("@/assets/images/drum-image.jpg"),
       },
       {
         id: 4,
