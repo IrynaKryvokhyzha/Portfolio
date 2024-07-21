@@ -12,6 +12,13 @@
           living in California, USA. My expertise is developing attractive and
           user-friendly websites and web applications.
         </p>
+        <h3>TECH:</h3>
+        <p class="fa-3x">
+          <font-awesome-icon :icon="['fab', 'vuejs']" />
+          <font-awesome-icon :icon="['fab', 'html5']" />
+          <font-awesome-icon :icon="['fab', 'css3-alt']" />
+          <font-awesome-icon :icon="['fab', 'js']" />
+        </p>
       </div>
     </div>
   </section>

@@ -13,23 +13,23 @@
           <ul class="menu__list">
             <li
               :class="['menu__item', { active: activeItem === 'home' }]"
-              @click="scroll('home')"
+              @click="emitScroll('home')"
             >
               Home
             </li>
             <li
               :class="['menu__item', { active: activeItem === 'about' }]"
-              @click="scroll('about')"
+              @click="emitScroll('about')"
             >
               About
             </li>
             <li
               :class="['menu__item', { active: activeItem === 'portfolio' }]"
-              @click="scroll('portfolio')"
+              @click="emitScroll('portfolio')"
             >
               Portfolio
             </li>
-            <li class="menu__item" @click="scroll('contact')">Contact</li>
+            <li class="menu__item" @click="emitScroll('contact')">Contact</li>
           </ul>
         </nav>
       </div>
@@ -59,10 +59,10 @@ export default {
       }
       this.scrolledNav = false;
     },
-    scroll(refName) {
+    emitScroll(refName) {
       this.activeItem = refName;
-      const element = document.getElementById(refName);
-      element.scrollIntoView({ behavior: "smooth" });
+      this.$emit("onScroll", refName);
+
       this.sidebarVisible = false;
     },
     showSidebar() {

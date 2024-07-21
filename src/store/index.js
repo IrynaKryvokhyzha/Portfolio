@@ -7,7 +7,7 @@ export default createStore({
         id: 1,
         title: "DR PromakeUp",
         description:
-          "Website for professional make-up artist that realized her dream and created a makeup brush brand",
+          "Website for professional makeup artist that realized her dream and created a makeup brush brand",
         link: "https://dorinarotari.com/",
         image: require("@/assets/images/promakeup.webp"),
       },

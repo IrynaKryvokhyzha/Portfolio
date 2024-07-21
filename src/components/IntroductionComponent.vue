@@ -12,6 +12,8 @@
         <font-awesome-icon
           @click="scroll('about')"
           :icon="['fas', 'angles-down']"
+          class="fa-solid fa-heart fa-beat"
+          style="--fa-animation-duration: 1s;"
         />
       </div>
     </div>
@@ -32,6 +34,7 @@ export default {
 
 <style lang="scss" scoped>
 .introduction {
+  position: relative;
   height: 100svh;
   font-family: "Open Sans";
   position: relative;
@@ -68,7 +71,6 @@ export default {
 .icon {
   font-size: 48px;
   font-weight: 900;
-
   text-shadow: 0 0 5px rgb(0, 0, 0);
 }
 .header {

@@ -7,23 +7,22 @@
         class="item"
         :style="{ '--i': ++index, '--total': getProductsList.length }"
       >
-        <a
-          :href="product.link"
-          class="link"
-          v-if="index !== getProductsList.length"
-        >
+        <div v-if="index !== getProductsList.length">
           <div class="image">
             <img :src="product.image" alt="image" />
             <div class="content">
               <h2 class="header">{{ product.title }}</h2>
               <p class="description">{{ product.description }}</p>
-              <button class="button">
-                Visit
-              </button>
+              <a :href="product.link">
+                <button class="button">
+                  Visit
+                </button>
+              </a>
             </div>
           </div>
-        </a>
-        <div v-else class="link deactivated">
+        </div>
+
+        <div v-else>
           <div class="image">
             <img :src="product.image" alt="image" />
             <div class="content">
@@ -70,6 +69,11 @@ export default {
   height: 300px;
   transform-style: preserve-3d;
   animation: rotate 40s linear infinite;
+  @media (any-hover: hover) {
+    &:hover {
+      animation-play-state: paused;
+    }
+  }
 }
 @keyframes rotate {
   0% {
@@ -109,13 +113,13 @@ export default {
     }
   }
 }
-
 .content {
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -153,7 +157,6 @@ export default {
 .button {
   color: yellow;
   font-size: 24px;
-
   text-decoration: underline;
   text-transform: capitalize;
 }
