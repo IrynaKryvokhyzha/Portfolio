@@ -94,7 +94,7 @@ span {
 
   @media (any-hover: hover) {
     &:hover {
-      scale: 2;
+      scale: 1.8;
     }
   }
 }

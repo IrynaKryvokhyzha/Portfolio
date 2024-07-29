@@ -5,7 +5,7 @@
         <img src="../assets/images/photo.jpg" alt="my image" />
       </div>
       <div class="body-content">
-        <span>ABOUT</span>
+        <span class="span-about">ABOUT</span>
         <h2>{{ title }}</h2>
         <p class="description">
           I am Iryna , a dedicated frontend developer from Ukraine, currently
@@ -13,12 +13,48 @@
           user-friendly websites and web applications.
         </p>
         <h3>TECH:</h3>
-        <p class="fa-3x">
-          <font-awesome-icon :icon="['fab', 'vuejs']" />
-          <font-awesome-icon :icon="['fab', 'html5']" />
-          <font-awesome-icon :icon="['fab', 'css3-alt']" />
-          <font-awesome-icon :icon="['fab', 'js']" />
-        </p>
+        <div class="fa-3x">
+          <div class="tech-item">
+            <h5 class="tech-title">JavaScript</h5>
+            <font-awesome-icon class="icon-js" :icon="['fab', 'js']" />
+          </div>
+          <div class="tech-item">
+            <h5 class="tech-title">Vue.js</h5>
+            <font-awesome-icon class="icon-vue" :icon="['fab', 'vuejs']" />
+          </div>
+          <div class="tech-item">
+            <h5 class="tech-title">React.js</h5>
+            <font-awesome-icon class="icon-react" :icon="['fab', 'react']" />
+          </div>
+          <div class="tech-item">
+            <h5 class="tech-title">HTML5</h5>
+            <font-awesome-icon class="icon-html" :icon="['fab', 'html5']" />
+          </div>
+          <div class="tech-item">
+            <h5 class="tech-title">CSS3</h5>
+            <font-awesome-icon class="icon-css" :icon="['fab', 'css3-alt']" />
+          </div>
+          <div class="tech-item">
+            <h5 class="tech-title">SASS</h5>
+            <font-awesome-icon class="icon-sass" :icon="['fab', 'sass']" />
+          </div>
+          <div class="tech-item">
+            <h5 class="tech-title">Bootstrap</h5>
+            <font-awesome-icon
+              class="icon-bootstrap"
+              :icon="['fab', 'bootstrap']"
+            />
+          </div>
+          <div class="tech-item">
+            <h5 class="tech-title">GitHub</h5>
+            <font-awesome-icon class="icon-github" :icon="['fab', 'github']" />
+          </div>
+
+          <div class="tech-item">
+            <h5 class="tech-title">Node.js</h5>
+            <font-awesome-icon class="icon-node" :icon="['fab', 'node-js']" />
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -114,9 +150,75 @@ h2::before {
   line-height: 1.6;
   font-size: 24px;
 }
-span {
+.span-about {
   border: white 1px solid;
   padding: 10px 20px;
   border-radius: 50%;
+}
+h3 {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+}
+.fa-3x {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tech-title {
+  font-size: 20px;
+}
+
+.icon-js,
+.icon-vue,
+.icon-react,
+.icon-html,
+.icon-css,
+.icon-sass,
+.icon-github,
+.icon-bootstrap,
+.icon-node {
+  transition: all 0.5s ease;
+  transform: rotate(0deg);
+
+  @media (any-hover: hover) {
+    &:hover {
+      transform: rotate(360deg);
+    }
+  }
+}
+.icon-js {
+  color: #f0db4f;
+}
+.icon-vue {
+  color: #42b883;
+}
+.icon-react {
+  color: #61dafb;
+}
+.icon-html {
+  color: #e34c26;
+}
+.icon-css {
+  color: #264de4;
+}
+.icon-sass {
+  color: #cc6699;
+}
+.icon-github {
+  color: #7f7f7f;
+}
+.icon-bootstrap {
+  color: #59287a;
+}
+.icon-node {
+  color: #3c873a;
 }
 </style>

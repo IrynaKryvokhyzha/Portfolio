@@ -1,5 +1,5 @@
 <template>
-  <div id="portfolio" class="portfolio">
+  <section id="portfolio" class="portfolio">
     <div class="slider">
       <div
         v-for="(product, index) in getProductsList"
@@ -33,7 +33,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
