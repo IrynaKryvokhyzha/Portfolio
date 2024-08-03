@@ -91,6 +91,9 @@ export default {
   display: flex;
   font-family: "Open Sans";
   color: white;
+  @media (max-width: 768px) {
+    height: 100%;
+  }
 
   // .about__body
 
@@ -98,14 +101,19 @@ export default {
   }
 }
 .body {
+  //position: relative;
   display: flex;
   flex-direction: row;
   width: 100%;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 .image-ibg {
   flex: 0 1 50%;
   position: relative;
   width: 100%;
+
   img {
   }
 }
@@ -118,12 +126,35 @@ export default {
   align-items: start;
   gap: 50px;
   background-color: #372f2f;
+  @media (max-width: 1280px) {
+    padding: 70px;
+  }
+  @media (max-width: 1168px) {
+    padding: 40px;
+  }
+  @media (max-width: 991px) {
+    padding: 30px;
+    gap: 35px;
+  }
+  @media (max-width: 768px) {
+    flex: 0 1 auto;
+  }
+  @media (max-width: 380px) {
+    padding: 10px;
+    gap: 20px;
+  }
 }
 h2 {
   position: relative;
   font-size: 58px;
   font-weight: 700;
   color: rgb(233, 233, 126);
+  @media (max-width: 1039px) {
+    font-size: 42px;
+  }
+  @media (max-width: 343px) {
+    font-size: 32px;
+  }
 }
 h2::before {
   content: "";
@@ -149,11 +180,17 @@ h2::before {
   text-align: start;
   line-height: 1.6;
   font-size: 24px;
+  @media (max-width: 343px) {
+    font-size: 20px;
+  }
 }
 .span-about {
   border: white 1px solid;
   padding: 10px 20px;
   border-radius: 50%;
+  @media (max-width: 991px) {
+    padding: 10px;
+  }
 }
 h3 {
   font-size: 24px;

@@ -37,46 +37,50 @@ export default {
   position: relative;
   height: 100svh;
   font-family: "Open Sans";
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
   transform-style: preserve-3d;
   z-index: -1;
   padding: 30px;
 }
 .background {
   transform: translateZ(-10px) scale(2);
-  height: 100%;
   position: absolute;
   height: 100%;
   width: 100%;
   object-fit: cover;
   object-position: center;
   z-index: -1;
+  background-color: black;
 }
 .content {
   display: flex;
   flex-direction: column;
-  height: 100%;
   justify-content: center;
   align-items: center;
-  padding-top: 500px;
   gap: 30px;
 }
+
 .header,
 .subheader,
 .icon {
   font-size: 48px;
   font-weight: 900;
   text-shadow: 0 0 5px rgb(0, 0, 0);
+  line-height: 1.5;
+
+  @media (max-width: 460px) {
+    font-size: 36px;
+  }
+  @media (max-width: 460px) {
+    font-size: 28px;
+  }
 }
 .header {
   font-weight: 700;
   color: white;
-  line-height: 1.5;
   text-align: center;
 }
 .subheader {

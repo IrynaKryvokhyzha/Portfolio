@@ -15,7 +15,7 @@
               <p class="description">{{ product.description }}</p>
               <a :href="product.link">
                 <button class="button">
-                  Visit
+                  View
                 </button>
               </a>
             </div>
@@ -69,6 +69,14 @@ export default {
   height: 300px;
   transform-style: preserve-3d;
   animation: rotate 40s linear infinite;
+  @media (max-width: 768px) {
+    width: 260px;
+    height: 200px;
+  }
+  @media (max-width: 400px) {
+    width: 180px;
+    height: 250px;
+  }
   @media (any-hover: hover) {
     &:hover {
       animation-play-state: paused;
@@ -94,6 +102,12 @@ export default {
   transform: rotateY(calc(var(--i) * 360deg / var(--total))) translateZ(400px);
   transition: transform 0.2s;
   z-index: 1;
+  @media (max-width: 768px) {
+    transform: rotateY(calc(var(--i) * 360deg / var(--total))) translateZ(300px);
+  }
+  @media (max-width: 400px) {
+    transform: rotateY(calc(var(--i) * 360deg / var(--total))) translateZ(200px);
+  }
 
   img {
     position: absolute;
@@ -129,6 +143,11 @@ export default {
   background: rgb(0, 0, 0, 0.5);
   opacity: 0;
   transition: all 0.5s ease;
+  @media (max-width: 768px) {
+    opacity: 1;
+    justify-content: flex-start;
+    gap: 5px;
+  }
   @media (any-hover: hover) {
     &:hover {
       opacity: 1;
@@ -148,16 +167,30 @@ export default {
   color: yellow;
   font-weight: 800;
   text-shadow: 3px 0 black;
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
+  @media (max-width: 400px) {
+    font-size: 18px;
+  }
 }
 .description {
   font-size: 24px;
   color: white;
   line-height: 1.2;
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+  @media (max-width: 400px) {
+  }
 }
 .button {
   color: yellow;
   font-size: 24px;
   text-decoration: underline;
   text-transform: capitalize;
+  @media (max-width: 400px) {
+    font-size: 16px;
+  }
 }
 </style>
