@@ -1,7 +1,7 @@
 <template>
   <MainMasterPage>
-    <div id="home" class="home">
-      <introduction-component id="introduction" />
+    <div class="home">
+      <introduction-component id="home" />
       <about-component />
       <portfolio-component />
     </div>

@@ -87,13 +87,10 @@ export default {
 
 <style lang="scss" scoped>
 .about {
-  height: 100svh;
+  position: relative;
   display: flex;
   font-family: "Open Sans";
   color: white;
-  @media (max-width: 768px) {
-    height: 100%;
-  }
 
   // .about__body
 
@@ -113,8 +110,17 @@ export default {
   flex: 0 1 50%;
   position: relative;
   width: 100%;
+  height: 100%;
+  @media (max-width: 768px) {
+    flex: 0 1 auto;
+    min-height: 400px;
+  }
+  @media (max-width: 420px) {
+    min-height: 300px;
+  }
 
   img {
+    object-position: center;
   }
 }
 .body-content {
@@ -126,6 +132,7 @@ export default {
   align-items: start;
   gap: 50px;
   background-color: #372f2f;
+
   @media (max-width: 1280px) {
     padding: 70px;
   }
@@ -149,6 +156,7 @@ h2 {
   font-size: 58px;
   font-weight: 700;
   color: rgb(233, 233, 126);
+
   @media (max-width: 1039px) {
     font-size: 42px;
   }

@@ -53,7 +53,7 @@ export default {
   methods: {
     updateScroll() {
       const scrollPosition = window.scrollY;
-      if (scrollPosition > 50) {
+      if (scrollPosition > 100) {
         this.scrolledNav = true;
         return;
       }
@@ -161,6 +161,7 @@ export default {
   .menu__list {
     align-items: flex-start;
     flex-direction: column;
+    justify-content: center;
   }
   .menu__item {
     padding: 10px 0;

@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer">
+  <footer id="contact" class="footer">
     <div class="social">
       <ul class="social__social-link">
         <li class="social__item">

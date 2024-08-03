@@ -1,5 +1,5 @@
 <template>
-  <section class="introduction">
+  <section id="home" class="introduction">
     <img
       class="background"
       src="../assets/images/forest.jpg"
@@ -61,6 +61,11 @@ export default {
   justify-content: center;
   align-items: center;
   gap: 30px;
+  min-height: 100%;
+  padding-top: 400px;
+  @media (max-width: 480px) {
+    padding-top: 200px;
+  }
 }
 
 .header,
@@ -74,7 +79,7 @@ export default {
   @media (max-width: 460px) {
     font-size: 36px;
   }
-  @media (max-width: 460px) {
+  @media (max-width: 325px) {
     font-size: 28px;
   }
 }
@@ -86,6 +91,7 @@ export default {
 .subheader {
   flex: 1 1 auto;
   color: white;
+  flex-grow: 1;
 }
 span {
   font-family: "Coming Soon";
