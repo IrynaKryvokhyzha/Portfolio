@@ -40,30 +40,6 @@ export default createStore({
         link: "https:",
         image: require("@/assets/images/truck.jpg"),
       },
-      // {
-      //   id: 6,
-      //   title: "Bean Scene",
-      //   description:
-      //     "Website for makeup artist that shows natural makeup brushes",
-      //   link: "https://dr-brushes.web.app/#/",
-      //   image: require("@/assets/images/promakeup.webp"),
-      // },
-      // {
-      //   id: 7,
-      //   title: "Drum Kit",
-      //   description:
-      //     "Website for makeup artist that shows natural makeup brushes",
-      //   link: "https://dr-brushes.web.app/#/",
-      //   image: require("@/assets/images/promakeup.webp"),
-      // },
-      // {
-      //   id: 8,
-      //   title: "DR PromakeUp",
-      //   description:
-      //     "Website for makeup artist that shows natural makeup brushes",
-      //   link: "https://dr-brushes.web.app/#/",
-      //   image: require("@/assets/images/promakeup.webp"),
-      // },
     ],
   },
   getters: {

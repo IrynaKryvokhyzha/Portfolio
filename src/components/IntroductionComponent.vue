@@ -1,5 +1,8 @@
 <template>
   <section id="home" class="introduction">
+    <!-- <div v-if="isLoading" class="loader">
+      <v-progress-circular indeterminate color="green"></v-progress-circular>
+    </div> -->
     <img
       class="background"
       src="../assets/images/forest.jpg"
